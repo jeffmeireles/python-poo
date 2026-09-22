@@ -1,25 +1,23 @@
  # Crie a classe Funcionário, onde podemos cadastrar nome, setor e cargo. Crie também um método que permita ao funcionário se apresentar
 
 from rich import print
+from rich import inspect
 
 class Funcionario:
-    def __init__(self):
-        self.nome = ""
-        self.setor = ""
-        self.cargo = ""
+    empresa = "LMOL"
+    def __init__(self, nome, setor, cargo):
+        # Atributos de Instância
+        self.nome = nome
+        self.setor = setor
+        self.cargo = cargo
 
     def apresentar(self):
-        return f"Olá! Eu me chamo {self.nome} e trabalho no setor de {self.setor} exercendo a função de {self.cargo} :handshake:\n"
+        return f"Olá! Eu me chamo [bold blue]{self.nome}[/] e trabalho no setor de [bold blue]{self.setor}[/] exercendo a função de [bold blue]{self.cargo}[/] na empresa {Funcionario.empresa}:handshake:"
 
 print()
-colaborador1 = Funcionario()
-colaborador1.nome = "Jefferson"
-colaborador1.setor = "E-commerce"
-colaborador1.cargo = "Analista"
+colaborador1 = Funcionario("Jefferson", "E-commerce", "Analista")
 print(colaborador1.apresentar())
 
-colaborador2 = Funcionario()
-colaborador2.nome = "Lucas"
-colaborador2.setor = "Contabilidade"
-colaborador2.cargo = "Analista"
+colaborador2 = Funcionario("Lucas", "Contabilidade", "Analista")
 print(colaborador2.apresentar())
+print()

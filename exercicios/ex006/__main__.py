@@ -1,4 +1,4 @@
-# O exercício 005 organiza o exercício 004 em módulos para deixar o programa mais limpo e organizado.
+# Aprendendo sobre Abstração e classe ABC
 
 from rich import inspect
 from classes import Aluno, Professor, Funcionario

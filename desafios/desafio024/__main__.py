@@ -6,3 +6,16 @@
 # servir() (abstract)
 # Devem ser criadas também as seguintes subclasses Cafe, Cha e Leite, que vão herdar os métodos misturar() e servir()
 
+from cafeteira import *
+
+def main():
+    bebida1 = Cafe()
+    bebida2 = Cha()
+    bebida3 = Leite()
+
+    bebida1.preparar()
+    bebida2.preparar()
+    bebida3.preparar()
+
+if __name__ == "__main__":
+    main()
